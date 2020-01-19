@@ -5,7 +5,7 @@ Java API to connect and control Xiaomi Yeelight Bulb.
 ```java
 // There are two ways to connect to a Bulb:
 
-// 1 - automatically discovers every bulbs on the network, see doc to get more info 
+// 1 - automatically discovers every bulb on the network, see doc to get more info 
 Collection<Bulb> bulbs = Bulb.discover(10 * 1000); 
     
 // 2 - specify Bulb ip to connect to
@@ -30,11 +30,11 @@ bulb.runMethod(method, params);
 ```
 
 ### Requeriments ###
-1. You need to enable <mark>LAN control</mark> inorder to allow 3rd party API's (like this one) to access and controll your device. See [this site](https://www.yeelight.com/faqs/lan_control) to set it up.
+1. You need to enable <mark>LAN control</mark> in order to allow 3rd party API's (like this one) to access and controll your device. See [this site](https://www.yeelight.com/faqs/lan_control) to set it up.
 
 2. As already said in example of usage, this API does not implement every available methods, however there is an <mark>easy and elegant</mark> way to simplify method invocation. Using <mark>bulb.runMethod()</mark> you just need to specify the method using String and its parameteres using Object Array, internally it encapsulates  command conversion to Yeelight's protocol and TCP socket writting. See [official yeelight doc](https://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf) to know all available methods.
 
-3. This API is directed to Bulb device however it works with all Yeelight devices, you can use bulb.runMethod() to invoce a specific method not implemented in this API. Note that at this moment Bulb.discover() method is Bulb specific. 
+3. This API is directed to Bulb device however it works with all Yeelight devices, you can use bulb.runMethod() to invoke a specific method not implemented in this API. Note that in the current version Bulb.discover() method is Bulb specific. 
 
 ### Notes ###
 This software is released into the public domain under [The Unlicense](https://github.com/RicardoPetronilho98/bulb-api/blob/master/LICENSE). 
